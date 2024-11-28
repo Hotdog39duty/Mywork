@@ -1,13 +1,18 @@
-{% load static %}
+{% load static %} <!-- Load the static template tag library -->
 
+<!-- Link to the external CSS file -->
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 
+<!-- Check if there are any questions in the latest_question_list -->
 {% if latest_question_list %}
     <ul>
+    <!-- Loop through each question in the latest_question_list -->
     {% for question in latest_question_list %}
+        <!-- Create a list item with a link to the question's detail page -->
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
+    <!-- Display a message if no questions are available -->
     <p>No polls are available.</p>
 {% endif %}
