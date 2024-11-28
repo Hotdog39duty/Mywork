@@ -1,10 +1,18 @@
+{# URL to the detail view of the question #}
 {% url 'polls:detail' question_id=question.id %}
+
+{# Display the question text #}
 <h1>{{ question.question_text }}</h1>
 
 <ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-{% endfor %}
+    {# Loop through each choice related to the question #}
+    {% for choice in question.choice_set.all %}
+        <li>
+            {# Display the choice text and the number of votes it received #}
+            {{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}
+        </li>
+    {% endfor %}
 </ul>
 
+{# Link to vote again, redirecting to the detail view of the question #}
 <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
