@@ -1,26 +1,30 @@
-Overview
-The Polls Template is a simple Django-based web application that allows users to create, vote, and view the results of polls. This template is ideal for integrating basic poll functionality into any Django project. It includes features for creating poll questions with multiple choices, voting, and viewing real-time poll results.
+# Polls Template
 
-Features
-Create Polls: Admins can create polls with multiple choices for users to vote on.
-Vote on Polls: Users can vote on poll options.
-View Results: After voting, users can see the results of the poll.
-Django Admin Interface: Easily manage polls, questions, and choices from the Django admin panel.
-Requirements
-Python 3.x
-Django 3.x or higher
-SQLite or any other supported database for Django
-Installation
-Clone the repository to your local machine:
+## Overview
 
-bash
-Copy code
+The **Polls Template** is a Django-based web application designed for creating and managing polls. It allows users to vote on questions and see real-time poll results. This template provides a quick way to add poll functionality to your Django project.
+
+## Features
+
+- **Create Polls**: Admins can create polls with multiple choices for users to vote on.
+- **Voting**: Users can vote for their preferred option in the poll.
+- **View Results**: Users can view the results of the poll after voting.
+- **Django Admin Interface**: Easily manage polls, questions, and choices through Django's built-in admin panel.
+
+## Requirements
+
+- Python 3.x
+- Django 3.x or higher
+- SQLite or any other database supported by Django
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/yourusername/polls-template.git
 cd polls-template
-Set up a virtual environment (optional but recommended):
 
-bash
-Copy code
 python3 -m venv venv
 source venv/bin/activate  # On Windows, use 'venv\Scripts\activate'
 Install the required dependencies:
